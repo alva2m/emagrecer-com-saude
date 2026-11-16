@@ -1,0 +1,1330 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173f32">
+<meta name="description" content="Emagrecer com Saúde: conheça nosso e-book digital sobre alimentação, hábitos saudáveis e bem-estar.">
+<title>Emagrecer com Saúde | Cuide de você</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #173f32;
+  --green2: #285d48;
+  --light: #e9f0e8;
+  --cream: #f8f6ef;
+  --white: #fff;
+  --text: #25342d;
+  --muted: #718078;
+  --gold: #c9a66b;
+  --radius: 22px;
+  --shadow: 0 15px 45px rgba(23,63,50,.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; }
+
+button { font: inherit; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+section { scroll-margin-top: 90px; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--green2);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--gold);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 47px);
+  color: var(--green);
+  margin-bottom: 18px;
+}
+
+.section-description {
+  max-width: 610px;
+  color: var(--muted);
+  margin-bottom: 42px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 25px;
+  border-radius: 9px;
+  background: var(--green);
+  color: white;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .5px;
+  transition: .25s;
+  border: 1px solid var(--green);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--green2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px #173f3228;
+}
+
+.btn-light {
+  background: transparent;
+  color: var(--green);
+}
+
+.btn-light:hover {
+  color: white;
+}
+
+/* HEADER */
+
+header {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #edf0eb;
+  backdrop-filter: blur(15px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+  color: var(--green);
+  font-size: 16px;
+  letter-spacing: -.5px;
+  line-height: 1.1;
+}
+
+.logo span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 700;
+  color: #526158;
+  transition: .2s;
+}
+
+.nav-links a:hover { color: var(--green2); }
+
+.nav .btn {
+  padding: 12px 18px;
+  font-size: 11px;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--green);
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  background: var(--cream);
+  overflow: hidden;
+  position: relative;
+  padding: 95px 0 105px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #d9e3d6;
+  border-radius: 50%;
+  right: -190px;
+  top: -170px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(43px, 5.4vw, 66px);
+  letter-spacing: -1.5px;
+  color: var(--green);
+  margin-bottom: 25px;
+}
+
+.hero h1 em {
+  color: #73957b;
+  font-style: normal;
+}
+
+.hero-copy {
+  color: #647269;
+  max-width: 525px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.hero-note {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #7c887f;
+}
+
+.hero-visual {
+  min-height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.book {
+  width: 275px;
+  height: 365px;
+  position: relative;
+  background: linear-gradient(145deg, #285d48, #102f25);
+  border-radius: 5px 15px 15px 5px;
+  box-shadow: 20px 25px 45px #142d2538, inset 8px 0 12px #ffffff12;
+  transform: rotate(-6deg);
+  padding: 35px 24px;
+  color: white;
+  z-index: 2;
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ffffff35;
+}
+
+.book::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  background: #c4b99c;
+  bottom: -7px;
+  left: 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.book-top {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #d6e1d1;
+  text-align: center;
+}
+
+.book-title {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.15;
+  margin-top: 48px;
+}
+
+.book-title span { color: #d9c99c; }
+
+.book-decoration {
+  width: 90px;
+  height: 90px;
+  margin: 25px auto 0;
+  border: 1px solid #c9d8bd;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 38px;
+  color: #d9c99c;
+}
+
+.book-bottom {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #d6e1d1;
+}
+
+.float-card {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  z-index: 3;
+  background: white;
+  padding: 17px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.float-card span {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* TRUST STRIP */
+
+.trust {
+  background: white;
+  border-bottom: 1px solid #edf0eb;
+  padding: 23px 0;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: center;
+  gap: 15px;
+}
+
+.trust-item {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.trust-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+/* ABOUT */
+
+.about {
+  padding: 105px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-art {
+  min-height: 370px;
+  border-radius: 25px;
+  background: var(--light);
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-art::before, .about-art::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #b6c9b5;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.about-art::after {
+  width: 340px;
+  height: 340px;
+}
+
+.leaf {
+  font-size: 105px;
+  z-index: 1;
+  color: var(--green);
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.check-list {
+  list-style: none;
+  margin: 25px 0 30px;
+}
+
+.check-list li {
+  padding: 9px 0;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.check-list li::before {
+  content: "✓";
+  background: var(--light);
+  color: var(--green);
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+}
+
+/* CONTENT */
+
+.content {
+  padding: 100px 0;
+  background: var(--cream);
+  text-align: center;
+}
+
+.content .section-description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+.card {
+  background: white;
+  border: 1px solid #edf0e9;
+  border-radius: var(--radius);
+  padding: 30px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.card-icon {
+  width: 49px;
+  height: 49px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--light);
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+
+.card h3 {
+  font-size: 17px;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* BENEFITS */
+
+.benefits {
+  padding: 105px 0;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.benefit-panel {
+  background: var(--green);
+  color: white;
+  padding: 42px;
+  border-radius: 25px;
+}
+
+.benefit-panel h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 29px;
+  margin-bottom: 15px;
+}
+
+.benefit-panel p {
+  color: #d3dfd5;
+  font-size: 13px;
+}
+
+.benefit-list {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.benefit-list li {
+  padding: 15px 0;
+  border-bottom: 1px solid #ffffff24;
+  display: flex;
+  gap: 14px;
+  font-size: 13px;
+}
+
+.benefit-list span { color: #d9c99c; }
+
+.benefit-copy p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* AUDIENCE */
+
+.audience {
+  padding: 85px 0;
+  background: var(--light);
+  text-align: center;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.audience-item {
+  padding: 24px 16px;
+  border-radius: 15px;
+  background: white;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.audience-item span {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+/* PRODUCT */
+
+.product {
+  padding: 110px 0;
+}
+
+.product-box {
+  background: var(--cream);
+  border-radius: 28px;
+  padding: 65px;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.product .book {
+  margin: auto;
+  transform: rotate(-4deg) scale(.95);
+}
+
+.product-copy p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 18px 0;
+}
+
+.product-details {
+  list-style: none;
+  margin: 25px 0;
+}
+
+.product-details li {
+  padding: 8px 0;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.price {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.price strong {
+  display: block;
+  font-size: 34px;
+  color: var(--green);
+  font-family: 'Playfair Display', serif;
+}
+
+/* FAQ */
+
+.faq {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 65px;
+}
+
+.faq-intro p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #edf0e9;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--green);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 20px 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.faq-item.active .faq-answer { display: block; }
+.faq-item.active .plus { transform: rotate(45deg); }
+
+.plus { transition: .2s; font-size: 20px; }
+
+/* FINAL CTA */
+
+.final-cta {
+  padding: 85px 0;
+  background: var(--green);
+  color: white;
+  text-align: center;
+}
+
+.final-cta h2 {
+  color: white;
+  margin-bottom: 18px;
+}
+
+.final-cta p {
+  color: #d4e0d5;
+  max-width: 550px;
+  margin: 0 auto 30px;
+  font-size: 14px;
+}
+
+.final-cta .btn {
+  background: white;
+  color: var(--green);
+  border-color: white;
+}
+
+.final-cta .btn:hover {
+  background: var(--light);
+}
+
+/* FOOTER */
+
+footer {
+  background: #102c23;
+  color: white;
+  padding: 55px 0 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 35px;
+}
+
+footer .logo { color: white; }
+
+footer p {
+  color: #b7c7bb;
+  font-size: 12px;
+  max-width: 300px;
+  margin-top: 17px;
+}
+
+footer h3 {
+  font-size: 13px;
+  margin-bottom: 17px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #c5d0c7;
+  font-size: 12px;
+}
+
+.footer-links a:hover { color: white; }
+
+.copyright {
+  border-top: 1px solid #ffffff20;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 10px;
+  color: #a9b9ad;
+}
+
+.disclaimer {
+  margin-top: 13px;
+  font-size: 10px;
+  color: #a9b9ad;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 11px; }
+  .nav .btn { display: none; }
+  .hero-grid { gap: 25px; }
+  .cards { grid-template-columns: repeat(2,1fr); }
+  .product-box { padding: 35px; gap: 30px; }
+}
+
+@media(max-width: 700px) {
+  header { height: 72px; }
+
+  .menu-btn { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 25px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #eee;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .hero { padding: 70px 0 60px; }
+
+  .hero-grid, .about-grid, .benefit-grid,
+  .product-box, .faq-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 { font-size: 43px; }
+  .hero-visual { min-height: 390px; }
+  .float-card { right: 0; }
+
+  .trust-grid { grid-template-columns: 1fr; gap: 18px; }
+
+  .about { padding: 70px 0; }
+  .about-art { min-height: 290px; }
+
+  .content, .benefits, .product, .faq {
+    padding: 75px 0;
+  }
+
+  .cards { grid-template-columns: 1fr; }
+  .audience-grid { grid-template-columns: repeat(2,1fr); }
+  .product-box { padding: 35px 20px; }
+  .benefit-panel { padding: 30px 24px; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
+}
+
+@media(max-width: 380px) {
+  .hero h1 { font-size: 36px; }
+  .book { transform: scale(.88) rotate(-6deg); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="logo">
+      EMAGRECER COM SAÚDE
+      <span>SAÚDE • EQUILÍBRIO • BEM-ESTAR</span>
+    </a>
+
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">O e-book</a>
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+
+    <a href="#produto" class="btn">CONHECER O E-BOOK ↗</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">UM NOVO OLHAR SOBRE SEUS HÁBITOS</div>
+
+      <h1>
+        Cuide de você.<br>
+        Transforme seus <em>hábitos.</em><br>
+        Viva com mais saúde.
+      </h1>
+
+      <p class="hero-copy">
+        Descubra orientações e conhecimentos para construir
+        uma rotina mais saudável, com escolhas conscientes
+        e hábitos que podem fazer a diferença no seu bem-estar.
+      </p>
+
+      <a href="#produto" class="btn">
+        QUERO CONHECER O E-BOOK <span>→</span>
+      </a>
+
+      <p class="hero-note">
+        Um material digital para aprender no seu próprio ritmo.
+      </p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="book">
+        <div class="book-top">GUIA DIGITAL</div>
+        <div class="book-title">
+          EMAGRECER<br>
+          COM<br>
+          <span>SAÚDE</span>
+        </div>
+        <div class="book-decoration">✳</div>
+        <div class="book-bottom">EQUILÍBRIO E BEM-ESTAR</div>
+      </div>
+
+      <div class="float-card">
+        ✦ Seu conhecimento começa aqui
+        <span>Aprenda. Reflita. Evolua.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      ✦ CONTEÚDO DIGITAL
+      <span>Material em formato PDF</span>
+    </div>
+    <div class="trust-item">
+      ◈ LEITURA FLEXÍVEL
+      <span>Consulte no seu próprio ritmo</span>
+    </div>
+    <div class="trust-item">
+      ♧ FOCO NO BEM-ESTAR
+      <span>Conhecimento e hábitos saudáveis</span>
+    </div>
+  </div>
+</div>
+
+<section class="about" id="sobre">
+  <div class="container about-grid">
+
+    <div class="about-art">
+      <div class="leaf">❧</div>
+    </div>
+
+    <div class="about-copy">
+      <div class="eyebrow">SOBRE O MATERIAL</div>
+
+      <h2>Conhecimento para uma vida mais saudável.</h2>
+
+      <p>
+        Cuidar de si começa com informação. O e-book
+        <strong>Emagrecer com Saúde</strong> é um material
+        digital pensado para apresentar conhecimentos
+        relacionados à alimentação e aos hábitos saudáveis.
+      </p>
+
+      <p>
+        Uma leitura organizada para ajudar você a compreender
+        melhor a importância de escolhas conscientes no dia a dia.
+      </p>
+
+      <ul class="check-list">
+        <li>Conteúdo digital organizado</li>
+        <li>Leitura simples e acessível</li>
+        <li>Informações sobre hábitos saudáveis</li>
+        <li>Consulte quando quiser</li>
+      </ul>
+
+      <a href="#produto" class="btn">VER O E-BOOK →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="content" id="conteudo">
+  <div class="container">
+
+    <div class="eyebrow">CONHEÇA O MATERIAL</div>
+    <h2>O que você vai encontrar?</h2>
+
+    <p class="section-description">
+      Um material para ampliar seus conhecimentos sobre
+      saúde, alimentação e bem-estar.
+    </p>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-icon">🥗</div>
+        <h3>Alimentação consciente</h3>
+        <p>Conheça a importância de desenvolver uma relação mais consciente com a alimentação.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">🌿</div>
+        <h3>Hábitos saudáveis</h3>
+        <p>Entenda como hábitos cotidianos fazem parte de uma rotina equilibrada.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">💚</div>
+        <h3>Bem-estar</h3>
+        <p>Descubra a importância de olhar para a saúde de maneira ampla.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">📖</div>
+        <h3>Conhecimento organizado</h3>
+        <p>Tenha acesso a informações reunidas em um material digital.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">⚖</div>
+        <h3>Equilíbrio na rotina</h3>
+        <p>Reflita sobre escolhas conscientes e hábitos que fazem parte do dia a dia.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">✨</div>
+        <h3>Aprendizado no seu ritmo</h3>
+        <p>Consulte o conteúdo conforme sua disponibilidade e necessidade.</p>
+      </article>
+
+    </div>
+    <p style="font-size:10px;color:#829087;margin-top:22px">
+      Os tópicos apresentados devem ser conferidos com o conteúdo da versão final do e-book.
+    </p>
+  </div>
+</section>
+
+<section class="benefits" id="beneficios">
+  <div class="container benefit-grid">
+
+    <div class="benefit-panel">
+      <div class="eyebrow" style="color:#d9c99c">POR QUE CONHECER?</div>
+
+      <h3>Informação que pode fazer parte da sua rotina.</h3>
+
+      <p>
+        Conhecer melhor seus hábitos é um passo importante
+        para cuidar da saúde com mais consciência.
+      </p>
+
+      <ul class="benefit-list">
+        <li><span>✦</span> Aprendizado sobre hábitos alimentares.</li>
+        <li><span>✦</span> Informações reunidas em um só lugar.</li>
+        <li><span>✦</span> Conteúdo para consultar quando quiser.</li>
+        <li><span>✦</span> Conhecimento sobre saúde e bem-estar.</li>
+      </ul>
+    </div>
+
+    <div class="benefit-copy">
+      <div class="eyebrow">UM MATERIAL PARA VOCÊ</div>
+
+      <h2>Mais conhecimento para cuidar de você.</h2>
+
+      <p>
+        Não se trata de buscar soluções milagrosas, mas de
+        compreender melhor a importância de hábitos saudáveis
+        e escolhas conscientes.
+      </p>
+
+      <p>
+        O conhecimento pode ajudar você a refletir sobre
+        sua rotina e buscar informações de qualidade.
+      </p>
+
+      <a href="#produto" class="btn">QUERO CONHECER →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="audience">
+  <div class="container">
+    <div class="eyebrow">PARA QUEM É?</div>
+    <h2>Um conteúdo para quem busca aprender.</h2>
+
+    <p class="section-description" style="margin-left:auto;margin-right:auto">
+      O material pode interessar a pessoas que desejam
+      conhecer mais sobre alimentação e bem-estar.
+    </p>
+
+    <div class="audience-grid">
+      <div class="audience-item">
+        <span>🥬</span>
+        Quem quer aprender sobre alimentação saudável.
+      </div>
+
+      <div class="audience-item">
+        <span>🌱</span>
+        Quem deseja conhecer hábitos mais conscientes.
+      </div>
+
+      <div class="audience-item">
+        <span>💚</span>
+        Quem busca informações sobre bem-estar.
+      </div>
+
+      <div class="audience-item">
+        <span>📚</span>
+        Quem gosta de aprender coisas novas.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="product" id="produto">
+  <div class="container">
+    <div class="product-box">
+
+      <div class="hero-visual" style="min-height:390px">
+        <div class="book">
+          <div class="book-top">GUIA DIGITAL</div>
+          <div class="book-title">
+            EMAGRECER<br>
+            COM<br>
+            <span>SAÚDE</span>
+          </div>
+          <div class="book-decoration">✳</div>
+          <div class="book-bottom">EQUILÍBRIO E BEM-ESTAR</div>
+        </div>
+      </div>
+
+      <div class="product-copy">
+        <div class="eyebrow">SEU PRÓXIMO PASSO</div>
+
+        <h2>Conheça o Emagrecer com Saúde.</h2>
+
+        <p>
+          Tenha acesso ao material digital e explore
+          conhecimentos sobre alimentação, hábitos
+          saudáveis e bem-estar.
+        </p>
+
+        <ul class="product-details">
+          <li>✓ E-book digital em PDF</li>
+          <li>✓ Leitura em dispositivos compatíveis</li>
+          <li>✓ Conteúdo organizado</li>
+          <li>✓ Acesso conforme as condições da compra</li>
+        </ul>
+
+        <div class="price">
+          INVESTIMENTO
+          <strong>R$ XX,XX</strong>
+          <span style="font-size:10px">Preço editável</span>
+        </div>
+
+        <a href="SEU_LINK_DE_PAGAMENTO" class="btn buy-button">
+          QUERO GARANTIR MEU E-BOOK →
+        </a>
+
+        <p style="font-size:10px">
+          Confira as condições de pagamento e acesso na página de compra.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container faq-layout">
+
+    <div class="faq-intro">
+      <div class="eyebrow">DÚVIDAS FREQUENTES</div>
+      <h2>Tem alguma dúvida?</h2>
+      <p>
+        Reunimos algumas respostas para ajudar você
+        a conhecer melhor o material antes da compra.
+      </p>
+    </div>
+
+    <div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como recebo o e-book?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          O recebimento ocorre conforme as instruções e condições
+          informadas na plataforma de pagamento.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          O material é digital?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          Sim. O produto é apresentado em formato de e-book PDF.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Posso acessar pelo celular?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          O PDF pode ser consultado em dispositivos que tenham
+          um leitor de arquivos PDF compatível.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funciona a compra?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          Clique no botão de compra e confira as informações,
+          o preço e as condições diretamente na página de pagamento.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          O conteúdo substitui acompanhamento profissional?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          Não. O material é informativo e não substitui
+          avaliação, diagnóstico ou orientação individualizada
+          de médicos e nutricionistas.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <div class="eyebrow" style="color:#d9c99c">EMAGRECER COM SAÚDE</div>
+
+    <h2>Seu bem-estar merece atenção.</h2>
+
+    <p>
+      Comece buscando conhecimento e descubra como pequenas
+      escolhas conscientes podem contribuir para uma
+      rotina mais saudável.
+    </p>
+
+    <a href="#produto" class="btn">
+      CONHECER O E-BOOK AGORA →
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <a href="#inicio" class="logo">
+          EMAGRECER COM SAÚDE
+          <span>SAÚDE • EQUILÍBRIO • BEM-ESTAR</span>
+        </a>
+
+        <p>
+          Conhecimento, informação e hábitos conscientes
+          para uma vida com mais saúde e bem-estar.
+        </p>
+      </div>
+
+      <div>
+        <h3>NAVEGAÇÃO</h3>
+        <div class="footer-links">
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre o e-book</a>
+          <a href="#conteudo">Conteúdo</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#faq">Perguntas frequentes</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>INFORMAÇÕES</h3>
+        <div class="footer-links">
+          <a href="mailto:SEU_EMAIL">Contato</a>
+          <a href="SUA_POLITICA_DE_PRIVACIDADE">Privacidade</a>
+          <a href="SEUS_TERMOS_DE_USO">Termos de uso</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Emagrecer com Saúde. Todos os direitos reservados.
+    </div>
+
+    <div class="disclaimer">
+      Material de caráter informativo e educativo.
+      Não substitui acompanhamento médico ou nutricional.
+      Resultados individuais não são garantidos.
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Menu para dispositivos móveis
+  const menuButton = document.querySelector('.menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuButton.addEventListener('click', () => {
+    const opened = navLinks.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', opened);
+    menuButton.textContent = opened ? '×' : '☰';
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = '☰';
+    });
+  });
+
+  // FAQ interativo
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
